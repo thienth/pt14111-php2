@@ -6,7 +6,7 @@ $productModel = new Product();
 $products = $productModel->all();
 
 $categoryModel = new Category();
-$categories = $categoryModel->all();
+$categories = $categoryModel->where('name', 'like', '%a%');
 
 var_dump($categories);
 
