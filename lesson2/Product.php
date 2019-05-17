@@ -36,7 +36,9 @@ class Product{
 	function get(){
 		$stmt = $this->conn->prepare($this->queryBuilder);
 		$stmt->execute();
+		
 		return $stmt->fetchAll();
+
 	}
 }
 // $casio = new Product();
@@ -44,7 +46,10 @@ class Product{
 // var_dump($casio->getAll());
 
 // var_dump(Product::all());
-$products = Product::where('name', 'like', '%Mr%')->get();
+$products = Product::where('name', 'like', '%Mr%')
+				->where('name', 'like', 'xxx')
+				->orWhere('price', '>', 2000)
+				->get();
 var_dump($products);
 
 
