@@ -4,19 +4,33 @@ require_once './models/User.php';
 require_once './models/Category.php';
 
 
-$userModel = new User();
-$productModel = new Product();
-$cateModel = new Category();
-
-// $users = $userModel->all();
-// $products = $productModel->all();
-// $cates = $cateModel->all();
-// 
-// lam the nao viet noi dung ham where tai BaseModel de thuc thi cau lenh select * from products where name like "%mr%"
-$products = $productModel->where("name", "like", "%mr%");
-$products = $productModel->where("id", ">", "10");
+// $products = Product::where('name', 'like', '%x%')
+// 					->andWhere('price', '>', 10000)
+// 					->get();
 // var_dump($users);die;
-var_dump($cates);die;
+$products = Product::all();
+// var_dump($products);die;
 
 
  ?>
+ <table>
+ 	<thead>
+ 		<tr>
+ 			<th>Name</th>
+ 			<th>Image</th>
+ 			<th>Cate name</th>
+ 		</tr>
+ 	</thead>
+ 	<tbody>
+ 		<?php foreach ($products as $key => $item): ?>
+ 			
+ 		<tr>
+ 			<td><?= $item->name?></td>
+ 			<td>
+ 				<img src="<?= $item->image?>" width="80">
+ 			</td>
+ 			<td><?= $item->getCateName()?></td>
+ 		</tr>
+ 		<?php endforeach ?>
+ 	</tbody>
+ </table>
