@@ -2,16 +2,22 @@
 /**
  * 
  */
+
+require_once './models/Product.php';
 class HomeController
 {
 	
 	function index()
 	{
-		echo "trang chu";
+		$products = Product::all();
+		include_once './views/homepage.php';
 	}
 	function productDetail()
 	{
-		echo "trang chi tiet san pham";
+
+		$product = Product::where(['id', '=', $_GET['id']])
+							->first();
+		include_once './views/chitiet.php';
 	}
 }
  ?>

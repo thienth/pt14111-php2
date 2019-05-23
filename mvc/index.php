@@ -28,7 +28,7 @@ switch ($url) {
 		break;
 	
 	default:
-		# code...
+		echo "404 - not found!";
 		break;
 }
 
