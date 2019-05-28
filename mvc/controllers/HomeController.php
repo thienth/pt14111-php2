@@ -12,7 +12,6 @@ class HomeController
 	}
 	function productDetail()
 	{
-
 		$product = Product::where(['id', '=', $_GET['id']])
 							->first();
 		include_once './views/chitiet.php';
