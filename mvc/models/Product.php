@@ -1,9 +1,4 @@
 <?php 
-require_once './models/BaseModel.php';
-/**
- * 
- */
-require_once './models/Category.php';
 namespace Models;
 class Product extends BaseModel
 {

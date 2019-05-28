@@ -1,0 +1,16 @@
+{
+    "name": "ginv2/mvc",
+    "authors": [
+        {
+            "name": "thienth32",
+            "email": "thienth32@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload":{
+    	"psr-4": {
+    		"Controllers\\": "controllers/",
+    		"Models\\": "models/"
+    	}
+    }
+}
