@@ -1,7 +1,5 @@
 <?php 
-/**
- * 
- */
+namespace Controllers;
 
 require_once './models/Product.php';
 class HomeController

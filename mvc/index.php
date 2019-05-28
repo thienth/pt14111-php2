@@ -4,6 +4,10 @@ $url = isset($_GET['url']) == true ? $_GET['url'] : "/";
 
 require_once './controllers/HomeController.php';
 require_once './controllers/ProductController.php';
+require_once './models/BaseModel.php';
+require_once './models/Product.php';
+require_once './models/Category.php';
+require_once './models/User.php';
 
 switch ($url) {
 	case '/':

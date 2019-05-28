@@ -1,0 +1,16 @@
+{
+    "name": "ginv2/lesson6",
+    "authors": [
+        {
+            "name": "thienth32",
+            "email": "thienth32@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+        	"MongoDB\\": "MongoDB/",
+        	"Mysql\\": "Mysql/"
+    	}
+    }
+}
