@@ -7,13 +7,15 @@ class HomeController
 	
 	function index()
 	{
-		$products = Product::all();
+		$products = Product::where('price', '>', 90000)
+							->orWhere('price', '<', 1000)
+							->orderBy('price', 'asc')
+							->get();
 		include_once './views/homepage.php';
 	}
 	function productDetail()
 	{
-		$product = Product::where(['id', '=', $_GET['id']])
-							->first();
+		$product = Product::find($_GET['id']);
 		include_once './views/chitiet.php';
 	}
 }

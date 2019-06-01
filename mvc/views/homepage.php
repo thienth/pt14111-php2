@@ -13,6 +13,7 @@
 			<?php foreach ($products as $key => $item): ?>
 				
 			<tr>
+				<td><?= $item->id?></td>
 				<td>
 					<a href="chi-tiet?id=<?= $item->id?>" title=""><?= $item->name?></a>
 				</td>
