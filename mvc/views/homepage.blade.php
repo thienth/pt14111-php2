@@ -10,16 +10,16 @@
 
 	<table>
 		<tbody>
-			<?php foreach ($products as $key => $item): ?>
+			@foreach ($products as $key => $item)
 				
 			<tr>
-				<td><?= $item->id?></td>
+				<td>{{$item->id}}</td>
 				<td>
-					<a href="chi-tiet?id=<?= $item->id?>" title=""><?= $item->name?></a>
+					<a href="detail/{{$item->id}}" title="">{{ $item->name}}</a>
 				</td>
-				<td><?= $item->price?></td>
+				<td>{{ $item->price}}</td>
 			</tr>
-			<?php endforeach ?>
+			@endforeach
 		</tbody>
 	</table>
 	

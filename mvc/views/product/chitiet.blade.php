@@ -7,9 +7,9 @@
 	<link rel="stylesheet" href="">
 </head>
 <body>
-	<h2><?= $product->name?></h2>
-	<h3>Giá: <?= $product->price?></h3>
-	<img src="<?= $product->image?>" width="300">
+	<h2>{{ $product->name}}</h2>
+	<h3>Giá: {{ $product->price}}</h3>
+	<img src="{{ $product->image}}" width="300">
 	
 </body>
 </html>

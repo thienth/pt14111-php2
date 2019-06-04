@@ -10,6 +10,9 @@ class CustomRoute
 
 
 		$router->get('/', ['Controllers\HomeController', "index"]);
+		$router->get('/detail/{id}', ['Controllers\HomeController', "productDetail"]);
+
+		$router->get('/remove/{id}/{name}?', ["Controllers\ProductController", "saveAdd"]);
 
 		$dispatcher = new Dispatcher($router->getData());
 

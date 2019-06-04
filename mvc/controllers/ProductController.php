@@ -11,9 +11,9 @@ class ProductController
 	{
 		echo "trang giao dien them san pham";
 	}
-	function saveAdd()
+	function saveAdd($id, $name = 'Khai hoc dot')
 	{
-		echo "trang luu thong tin san pham";
+		echo "id = $id <br> name = $name <br> school = " . $_GET['school'];
 	}
 }
  ?>

@@ -2,21 +2,21 @@
 namespace Controllers;
 
 use Models\Product;
-class HomeController
+class HomeController extends BaseController
 {
 	
 	function index()
 	{
-		$products = Product::where('price', '>', 90000)
-							->orWhere('price', '<', 1000)
-							->orderBy('price', 'asc')
-							->get();
-		include_once './views/homepage.php';
+		$products = Product::all();
+		// var_dump($products); die;
+		return $this->render('homepage', [
+											'products' => $products
+										]);
 	}
-	function productDetail()
+	function productDetail($id)
 	{
-		$product = Product::find($_GET['id']);
-		include_once './views/chitiet.php';
+		$product = Product::find($id);
+		return $this->render('product.chitiet', compact('product'));
 	}
 }
  ?>
