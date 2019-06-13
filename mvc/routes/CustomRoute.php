@@ -13,6 +13,8 @@ class CustomRoute
 		$router->get('/detail/{id}', ['Controllers\HomeController', "productDetail"]);
 
 		$router->get('/remove/{id}/{name}?', ["Controllers\ProductController", "saveAdd"]);
+		$router->get('/mail-form', ["Controllers\ProductController", "mailForm"]);
+		$router->post('/mail-form', ["Controllers\ProductController", "sendEmail"]);
 
 		$dispatcher = new Dispatcher($router->getData());
 
