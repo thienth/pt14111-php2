@@ -2,13 +2,15 @@
 namespace Controllers;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-
+use Models\Product;
 class ProductController extends BaseController
 {
 	
-	function listProduct()
+	function remove($id)
 	{
-		echo "trang danh sach san pham";
+		Product::destroy($id);
+		header('location: http://localhost/pt14111/mvc');
+		return false;
 	}
 	function addForm()
 	{

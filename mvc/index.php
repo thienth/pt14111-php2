@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 $url = isset($_GET['url']) == true ? $_GET['url'] : "/";
 
 /**
